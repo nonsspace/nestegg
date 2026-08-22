@@ -68,7 +68,9 @@ async function main() {
   console.log(`Category: ${category.name} (categoryId ${category.categoryId})\n`);
 
   const groups = await get(`${BASE}/tcgplayer/${category.categoryId}/groups`);
-  groups.sort((a, b) => String(b.publishedOn ?? "").localeCompare(String(a.publishedOn ?? "")));
+  // publishedOn is unreliable on TCGCSV — plenty of 2003-era sets carry a recent
+  // date. groupId is monotonic, so higher id = newer set. Sort on that instead.
+  groups.sort((a, b) => b.groupId - a.groupId);
 
   if (!setArg) {
     console.log("Most recent sets:\n");

@@ -118,7 +118,3 @@
     {"categoryId":3,"groupId":23821,"productId":598489,"label":"Prismatic Evolutions Tech Sticker Collection Case","qty":0,"costBasis":null}
   ]
 }
-{
-  "_comment": "Run: node find-products.js pokemon \"Prismatic\"  — then paste the printed lines below and fill in qty + costBasis (your per-unit cost, not the total).",
-  "products": []
-}

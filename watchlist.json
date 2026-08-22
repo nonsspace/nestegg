@@ -1,0 +1,4 @@
+{
+  "_comment": "Run: node find-products.js pokemon \"Prismatic\"  — then paste the printed lines below and fill in qty + costBasis (your per-unit cost, not the total).",
+  "products": []
+}
